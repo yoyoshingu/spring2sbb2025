@@ -1,6 +1,8 @@
-package com.sg.ai;
+package com.sg.ai.answer;
 
 import java.time.LocalDateTime;
+
+import com.sg.ai.question.Question;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
