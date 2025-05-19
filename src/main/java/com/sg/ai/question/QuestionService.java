@@ -1,5 +1,6 @@
 package com.sg.ai.question;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -29,5 +30,13 @@ public class QuestionService {
 		}else {
 			throw new DataNotFoundException("question not found: 그런 질문 없습니다");
 		}
+	}
+	
+	public void create(String subject, String content) {
+		Question q = new Question();
+		q.setSubject(subject);
+		q.setContent(content);
+		q.setCreateDate(LocalDateTime.now());
+		this.questionRepository.save(q);
 	}
 }
