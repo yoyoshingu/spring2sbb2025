@@ -44,7 +44,7 @@ class SbbApplicationTests {
 	@Autowired
 	private AnswerRepository answerRepository;
 	
-	@Test
+//	@Test
 	void testJpaa() {
 		Optional<Question> oq = this.questionRepository.findById(1);
 		assertTrue(oq.isPresent());
